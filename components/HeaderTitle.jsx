@@ -2,15 +2,14 @@ import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
 export const HeaderTitle = () => {
-    return ( 
-        <Text>Welcome</Text>
+    return (
+        <Text style={styles.text}>Welcome</Text>
     );
 };
 
-const stylesheets = () => {
-    return StyleSheet.create({
-        text: {
-            //
-        }
-    });
-}
+const styles = StyleSheet.create({
+    text: {
+        fontSize: 40,
+    },
+})
+
