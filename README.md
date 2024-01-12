@@ -4,7 +4,7 @@ EN: Official repository for Focustreak development team
 
 IT: Repository ufficiale per il team di sviluppo di Focustreak
 
-## Come usare questa repo
+## Come usare questa repo🌶️
 
 Focustreak è hostato su Github per motivi organizzativi e di convenzione tecnica. Qui sotto le modalità per come usare correttamente la repository:
 
