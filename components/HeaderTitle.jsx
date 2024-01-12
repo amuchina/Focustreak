@@ -1,14 +1,16 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 
-function HeaderTitle() {
-    return (
-        
-        <Text styles={styles.text}>Welcome</Text>
-        
+export const HeaderTitle = () => {
+    return ( 
+        <Text>Welcome</Text>
     );
 };
 
-
-
-export default HeaderTitle;
+const stylesheets = () => {
+    return StyleSheet.create({
+        text: {
+            //
+        }
+    });
+}
