@@ -2,7 +2,6 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Text } from 'react-native';
 import { HeaderTitle } from './components/HeaderTitle';
-import { Header } from 'react-native/Libraries/NewAppScreen';
 
 export default function App() {
   return (
