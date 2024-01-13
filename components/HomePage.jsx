@@ -1,24 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import { HeaderTitle } from './components/header/HeaderTitle';
+import { StyleSheet, View, Text } from 'react-native';
+import { HeaderTitle } from './header/HeaderTitle';
+import { Header } from './header/Header';
 import { useFonts, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
-import HomePage from './components/HomePage';
 
-export default function App() {
-  const [fontsLoaded, fontError] = useFonts({
-    Poppins_600SemiBold,
-  });
-
-  if (!fontsLoaded && !fontError) {
-    return null;
-  }
-
+export default function HomePage() {
   return (
     <View style={styles.container}>
-      <HomePage></HomePage>
-      <StatusBar style="auto" />
+      <Header></Header>
     </View>
   );
 }
@@ -26,6 +17,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 40,
+    marginBottom: 10,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
