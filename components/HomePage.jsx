@@ -1,26 +1,24 @@
 import React from 'react';
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { HeaderTitle } from './header/HeaderTitle';
-import { Header } from './header/Header';
 import { useFonts, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { DropdownMenu } from './header/DropdownMenu';
+import { Header } from './header/Header';
 
-export default function HomePage() {
-  return (
-    <View style={styles.container}>
-      <Header></Header>
-    </View>
-  );
+export const HomePage = () => {
+    return (
+        <View style={styles.container}>
+            <Header></Header>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    marginTop: 40,
-    marginBottom: 10,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    gap: 20,
   },
 });
