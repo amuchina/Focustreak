@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     text: {
         fontFamily: 'Poppins_600SemiBold',
         fontSize: 40,
+        opacity: 0.2,
     },
 })
 

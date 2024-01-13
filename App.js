@@ -2,8 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import { HeaderTitle } from './components/HeaderTitle';
+import { HeaderTitle } from './components/header/HeaderTitle';
 import { useFonts, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
+import { HomePage } from './components/HomePage';
 
 export default function App() {
   const [text, setText] = useState('');
@@ -17,7 +18,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <HeaderTitle userName={'giovi'}></HeaderTitle>
+      <HomePage></HomePage>
       <StatusBar style="auto" />
     </View>
   );
