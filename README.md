@@ -39,7 +39,7 @@ Non si deve **mai** modificare il branch dev direttamente, a meno che di modific
 git checkout nome_branch
 ```
 - Una volta finito di editare il codice e finito di testare le modifiche, il branch usato per implementare il nuovo codice deve essere **mergeato** dal branch attuale al branch **dev**. Mergeare un branch con un altro vuoldire aggiungere le modifiche effettuate sul nostro branch, al codice del branch destinatario (possono essere aggiunte, modifiche o rimozioni di codice). Per mergeare un branch con un altro, è necessario aprire una **pull request**, ma non è oggetto di questa guida.
-Nota: è consigliato eliminare i branch utilizzati una volta mergeati con dev.
+Nota: è consigliato eliminare i branch (con il comando git branch -d nome_branch, fuori da quel branch) utilizzati una volta mergeati con dev.
 
 3) Lavorando più persone sullo stesso progetto, chiaramente le modifiche devono essere sincronizzate sia in locale che su Github (seguire ogni volta questi passaggi):
 - Per visualizzare i file modificati, usare il comando:
