@@ -1,14 +1,16 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { HeaderTitle } from './HeaderTitle';
 import { DropdownMenu } from './DropdownMenu';
 
 export const Header = () => {
   return (
-    <View style={styles.container}>
-      <DropdownMenu></DropdownMenu>
-      <HeaderTitle userName={'giovi'}></HeaderTitle>
-    </View>
+    <SafeAreaView>
+      <View style={styles.container}>
+        <DropdownMenu></DropdownMenu>
+        <HeaderTitle userName={'giovi'}></HeaderTitle>
+      </View>  
+    </SafeAreaView>
   );
 }
 
