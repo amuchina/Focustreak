@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { HeaderTitle } from './components/header/HeaderTitle';
 import { useFonts, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
 import { HomePage } from './components/HomePage';
@@ -17,10 +17,12 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <HomePage></HomePage>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.safearea}>
+      <View style={styles.container}>
+        <HomePage></HomePage>
+        <StatusBar style="auto" />
+      </View>  
+    </SafeAreaView>
   );
 }
 
@@ -31,4 +33,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  safearea: {
+    flex: 1
+  }
 });

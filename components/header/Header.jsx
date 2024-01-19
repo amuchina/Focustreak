@@ -5,12 +5,10 @@ import { DropdownMenu } from './DropdownMenu';
 
 export const Header = () => {
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <DropdownMenu></DropdownMenu>
-        <HeaderTitle userName={'giovi'}></HeaderTitle>
-      </View>  
-    </SafeAreaView>
+    <View style={styles.container}>
+      <DropdownMenu></DropdownMenu>
+      <HeaderTitle userName={'giovi'}></HeaderTitle>
+    </View>  
   );
 }
 
