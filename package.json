@@ -2,7 +2,7 @@
   "dependencies": {
     "@expo-google-fonts/poppins": "^0.2.3",
     "bootstrap-icons": "^1.11.3",
-    "expo": "^49.0.21",
+    "expo": "^49.0.22",
     "expo-font": "~11.4.0",
     "expo-splash-screen": "^0.22.0",
     "expo-status-bar": "~1.6.0",
