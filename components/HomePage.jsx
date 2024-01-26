@@ -2,30 +2,39 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Header } from './header/Header';
 import { ProgressContainer } from './progressSection/ProgressContainer';
-import { RecentGoalsContainer } from './recentGoalsSection/RecentGoalsContainer';
+import { GoalContainer } from './goalSection/GoalContainer';
 
 export const HomePage = () => {
-    return (
-        <View style={styles.container}>
-          <View style={styles.headerContainer}>
-            <Header/>  
-          </View>
-          <View style={styles.innerContainer}>
-            <ProgressContainer/>
-            <RecentGoalsContainer/>  
-          </View>
+  return (
+    <View style={styles.mainContainer}>
+      <View style={styles.headerContainer}>
+          <Header></Header>
+          <ProgressContainer></ProgressContainer>
+      </View>
+      <View style={styles.goalsContainer}>
+        <View style={styles.goals}>
+          <GoalContainer color="#ffaa00"></GoalContainer>
+          <GoalContainer color="#aaff00"></GoalContainer>
+          <GoalContainer color="#00aaff"></GoalContainer>
+          <GoalContainer color="#ffff00"></GoalContainer>
         </View>
-    );
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'column',
-    gap: 20,
+  mainContainer: {
+    gap: 10
   },
-  innerContainer: {
-    flexDirection: 'column',
-    height: 300,
-    backgroundColor: 'red'
+  headerContainer: {
+    
+    gap: 0,
+  },
+  goalsContainer: {
+    // here
+  },
+  goals: {
+    // here
   }
 });
