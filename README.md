@@ -75,4 +75,9 @@ Nota: anche qui, se Git chiede di aggiungere cose al comando, farlo è meglio. I
 
 ### Questo è quello che devi sapere per usare Git e Github, ora vai a lavorare grazie ;)
 
-### un saluto da giovi✌🏻
+# Istruzione per NPM
+
+Per eseguire il progetto e vederlo su un emulatore/dispositivo android è necessario eseguire alcuni comandi.
+1. verifica di aver installato tutte le dipendenze. Dentro la directory del progetto, esegui il comando `npm install`, installando coì tutte le dipendeze del file `package.json`
+2. una volta installate le dipendenze, usare il comando expo per eseguire il progetto: `npx expo start`
+3. (Per chi userà un dispositivo Android) a questo punto apparirà un codice QR sul terminale. Scaricare l'applicazione (dal AppStore/PlayStore) `Expo Go`  e scannerizzare il QR.
