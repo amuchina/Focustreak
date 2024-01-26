@@ -19,7 +19,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.safearea}>
       <View style={styles.container}>
-        <HomePage></HomePage>
+        <HomePage/>
         <StatusBar style="auto" />
       </View>  
     </SafeAreaView>

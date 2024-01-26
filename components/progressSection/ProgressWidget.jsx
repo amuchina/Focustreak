@@ -11,13 +11,29 @@ export const ProgressWidget = (props) => {
       start={{x: 0, y: 1}} 
       end={{x: 0, y: 2}}
       colors={
-        props.title == 'Stai andando bene!' ? 
+        props.type == 'valid' ? 
         ['#81E6A4', '#499FB2'] :
         ['#f5425d', '#ed5858']}
       style={styles.widgetContainer}>
         <View style={styles.container}>
-          <ProgressWidgetTitle style={styles.widgetTitle} title={props.title}/>
-          <ProgressWidgetDescription/>  
+          <ProgressWidgetTitle 
+          title={
+            props.type == 'valid' ?
+            'Stai andando bene!' :
+            'Puoi fare di meglio'
+          }/>
+          <ProgressWidgetDescription 
+          text={
+            props.type == 'valid' ?
+            'Continua cosi! I tuoi traguardi sono invidiabili!' :
+            'Non darti per sconfitto...puoi migliorare!'
+          }
+          color={
+            props.type == 'valid' ?
+            '#D0F4DC' :
+            '#f0b4b4'
+          }
+          />  
         </View>
         
       </LinearGradient>  
@@ -28,9 +44,9 @@ export const ProgressWidget = (props) => {
 
 const styles = StyleSheet.create({
   widgetContainer: {
-      height: 140,
-      borderRadius: 25,
-      elevation: 10,
+    height: 140,
+    borderRadius: 25,
+    elevation: 10,
   },
   container: {
     width: 350,
