@@ -21,7 +21,7 @@ export default function App() {
       <View style={styles.container}>
         <HomePage></HomePage>
         <StatusBar style="auto" />
-      </View>  
+      </View>
     </SafeAreaView>
   );
 }
