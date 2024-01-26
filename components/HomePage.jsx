@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { Header } from './header/Header';
 import { ProgressContainer } from './progressSection/ProgressContainer';
 

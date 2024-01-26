@@ -5,7 +5,7 @@ import { ProgressWidget } from './ProgressWidget'
 export const ProgressContainer = () => {
   return (
     <View>
-        <ProgressWidget></ProgressWidget>
+        <ProgressWidget title={'Stai andando bene'}></ProgressWidget>
     </View>
   )
 }
