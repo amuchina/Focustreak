@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NotificationBox } from './NotificationBox';
 
 export const Notifications = () => {
   let notifications = [
@@ -58,7 +59,7 @@ export const Notifications = () => {
   return (
     <View style={styles.container}>
       {Object.keys(notificationsByMonth).map((month, index) => (
-        <NotificationBox month={month} index={index}><NotificationBox/>
+        <NotificationBox key={index} month={month} index={index} />
       ))}
     </View>
   );

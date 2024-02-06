@@ -1,11 +1,5 @@
-import {Text, View} from "react-native";
-
-
-
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Header } from './header/Header';
-import { Notifications } from './notificationsSection/Notifications';
 
 export const NotificationsPage = (props) => {
   return (
@@ -21,13 +15,6 @@ export const NotificationsPage = (props) => {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    padding: 10,
-  },
   monthBox: {
     backgroundColor: 'pink',
     padding: 10,
