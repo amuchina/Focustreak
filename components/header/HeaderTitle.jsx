@@ -3,7 +3,7 @@ import { Text, StyleSheet, View } from 'react-native';
 
 export const HeaderTitle = (props) => {
     return (
-        <Text style={styles.text}>Welcome, {props.userName}</Text>
+        <Text style={styles.text}>{props.text}</Text>
     );
 };
 

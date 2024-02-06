@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { HeaderTitle } from './components/header/HeaderTitle';
 import { useFonts, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
-import { HomePage } from './components/HomePage';
+import { NotificationsPage } from './components/NotificationsPage';
 
 export default function App() {
   const [text, setText] = useState('');
@@ -19,7 +19,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.safearea}>
       <View style={styles.container}>
-        <HomePage></HomePage>
+        <NotificationsPage></NotificationsPage>
         <StatusBar style="auto" />
       </View>  
     </SafeAreaView>
