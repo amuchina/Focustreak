@@ -1,15 +1,14 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Header } from './header/Header';
-import { ProgressContainer } from './progressSection/ProgressContainer';
+import {StyleSheet, View} from 'react-native';
+import {Header} from './header/Header';
+import {ProgressContainer} from './progressSection/ProgressContainer';
 
 export const HomePage = () => {
-    return (
-        <View style={styles.container}>
-            <Header page={'home'}></Header>
-            <ProgressContainer></ProgressContainer>
-        </View>
-    );
+  return (
+    <View style={styles.container}>
+      <ProgressContainer></ProgressContainer>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

@@ -6,7 +6,6 @@ import {Notifications} from './notificationsSection/Notifications';
 export const NotificationsPage = () => {
   return (
     <View style={styles.container}>
-      <Header page={'notifications'}></Header>
       <Notifications></Notifications>
     </View>
   );

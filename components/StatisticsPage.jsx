@@ -6,7 +6,6 @@ import {Graph} from './statisticsSection/Graph';
 export const StatisticsPage = () => {
   return (
     <View style={styles.container}>
-      <Header page={'statistics'}></Header>
       <Graph type={'1'}></Graph>
       <Graph type={'2'}></Graph>
       <Graph type={'3'}></Graph>

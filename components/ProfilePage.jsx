@@ -16,7 +16,6 @@ export const ProfilePage = () => {
 
   return (
     <View style={styles.container}>
-      <Header page={'profile'}></Header>
       <View style={styles.profilePictureContainer}>
         {/* Profile picture circle */}
         <View style={styles.profilePicture}></View>
