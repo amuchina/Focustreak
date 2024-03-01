@@ -12,6 +12,9 @@ export const Header = (props) => {
     case 'notifications':
       text = "Notifications";
       break;
+    case 'statistics':
+      text = 'Statistics';
+      break;
     default:
       text = "Nothing";
   }
