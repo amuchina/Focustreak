@@ -8,16 +8,17 @@ export const Graph = (props) => {
   let text = '';
   switch (props.type) {
     case '1':
+      text = '';
       break;
     case '2':
+      text = '';
       break;
     case '3':
+      text = '';
       break;
-    default:
-      text = 'ransom text';
   }
 
-  text = 'ransom text'; // to delete
+  text = 'random text'; // to delete ------------------------
 
   return (
     <View style={styles.container}>
@@ -25,6 +26,7 @@ export const Graph = (props) => {
       <LinearGradient
         colors={['greenyellow', 'green']}
         style={styles.widget}>
+
       </LinearGradient>
     </View>
   );

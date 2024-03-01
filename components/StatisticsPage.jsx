@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
 
-    width: 310, // fix this ugly code
+    width: 350, // fix this ugly code
   }
 });
