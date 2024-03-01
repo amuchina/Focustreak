@@ -6,7 +6,7 @@ import { ProgressContainer } from './progressSection/ProgressContainer';
 export const HomePage = () => {
     return (
         <View style={styles.container}>
-            <Header></Header>
+            <Header page={'home'}></Header>
             <ProgressContainer></ProgressContainer>
         </View>
     );
