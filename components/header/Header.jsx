@@ -15,6 +15,9 @@ export const Header = (props) => {
     case 'statistics':
       text = 'Statistics';
       break;
+    case 'profile':
+      text = 'Profile';
+      break;
     default:
       text = "Nothing";
   }
@@ -33,6 +36,5 @@ const styles = StyleSheet.create({
     gap: 20,
 
     marginTop: 20,      // fix this thing
-    marginBottom: -650, // fix this thing
   },
 });
