@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header} from './header/Header';
 import {Notifications} from './notificationsSection/Notifications';
 
 export const NotificationsPage = () => {
