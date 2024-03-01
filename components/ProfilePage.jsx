@@ -17,13 +17,18 @@ export const ProfilePage = () => {
   return (
     <View style={styles.container}>
       <View style={styles.profilePictureContainer}>
-        {/* Profile picture circle */}
         <View style={styles.profilePicture}></View>
+        <Text style={styles.username}>{'{username}'}</Text>
       </View>
-      <View style={styles.profileInfo}>
-        <Text style={styles.username}>Username: JohnDoe</Text>
-        <Text style={styles.email}>Email: johndoe@example.com</Text>
-        {/* Add more profile information here */}
+      <View style={styles.infoSection}>
+        <Text style={styles.infoText}>{'Nome: -------------'}</Text>
+        <Text style={styles.infoText}>{'Cognome: ------------------'}</Text>
+        <Text style={styles.infoText}>{'Email: ---------------'}</Text>
+        <Text style={styles.infoText}>{'Telefono: ----------'}</Text>
+      </View>
+      <View style={styles.infoSection}>
+        <Text style={styles.infoText}>{'Tempo salvato: ------------'}</Text>
+        <Text style={styles.infoText}>{'Traguardi raggiunti: ---------'}</Text>
       </View>
     </View>
   );
@@ -38,26 +43,32 @@ const styles = StyleSheet.create({
   profilePictureContainer: {
     marginTop: 20,
     alignItems: 'center',
+    marginBottom: 20,
   },
   profilePicture: {
-    width: 120,
-    height: 120,
-    borderRadius: 60, // Half of the width and height to create a circle
+    width: 180,
+    height: 180,
+    borderRadius: 999, // Half of the width and height to create a circle
     backgroundColor: 'lightgrey', // Placeholder color for the profile picture
     marginBottom: 10,
   },
-  profileInfo: {
-    flex: 1, // Take up all available space
-    alignItems: 'center',
-    justifyContent: 'flex-start', // Align content at the top
-    marginTop: 20, // Add some margin from the top
+  infoSection: {
+    flex: 1,
+    alignItems: 'left',
+    width: 320, // Fix this ugly thing dude, it's painful to see. Make it extend (+ 20 margin)
+    backgroundColor: 'lightgrey',
+    margin: 20,
+    padding: 20,
+    borderRadius: 30,
   },
   username: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
   },
-  email: {
+  infoText: {
     fontSize: 18,
-  },
+    marginTop: 5,
+    marginHorizontal: 10,
+  }
 });
