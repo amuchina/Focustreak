@@ -2,47 +2,56 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {LinearGradient} from "expo-linear-gradient";
 
-export const Graph = (props) => {
-
-  // INSERT GRAPH HERE IN THE FUTURE (with params)
-  let text = '';
-  switch (props.type) {
-    case '1':
-      text = '';
+function coloredBox(type) {
+  let customStyle = {};
+  switch (type) {
+    case 'app_usage_chart':
+      customStyle = {
+        backgroundColor: 'blue',
+      };
       break;
-    case '2':
-      text = '';
+    case 'average_time_chart':
+      customStyle = {
+        backgroundColor: 'red',
+      };
       break;
-    case '3':
-      text = '';
+    case 'saved_time_chart':
+      customStyle = {
+        backgroundColor: 'green',
+      };
       break;
   }
 
-  text = 'random text'; // to delete ------------------------
+  return (
+    <View style={[styles.widget, customStyle, {justifyContent: 'center'}]}>
+      <Text style={styles.text}>{'{'+type+'}'}</Text>
+    </View>
+  );
+}
+
+export const Graph = (props) => {
+  // INSERT GRAPH HERE IN THE FUTURE (with params)
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{text}</Text>
-      <LinearGradient
-        colors={['greenyellow', 'green']}
-        style={styles.widget}>
-
-      </LinearGradient>
+      {coloredBox(props.type)}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    // here
+    flex: 1,
   },
   text: {
     fontFamily: 'Poppins_600SemiBold',
     fontSize: 20,
     opacity: 0.2,
+
+    textAlign: 'center', // JUST TEMP, REMOVE THIS
   },
   widget: {
-    height: 140,
+    height: 170,
     borderRadius: 25
-  }
+  },
 });
