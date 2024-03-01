@@ -1,74 +1,150 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { NotificationBox } from './NotificationBox';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
 
 export const Notifications = () => {
   let notifications = [
     {
-      "date": "2024-01-01",
-      "previewText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "id": 123456789,
+      "title": "New Message",
+      "body": "You have received a new message from a friend.",
+      "timestamp": "2024-02-23T12:30:45Z",
+      "sender": {
+        "id": 987654321,
+        "name": "John Doe"
+      },
+      "action": {
+        "type": "navigate",
+        "screen": "MessageScreen",
+        "params": {
+          "messageId": 789012345
+        }
+      }
     },
     {
-      "date": "2024-01-15",
-      "previewText": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "id": 123456789,
+      "title": "New Message",
+      "body": "You have received a new message from a friend.",
+      "timestamp": "2024-02-23T12:30:45Z",
+      "sender": {
+        "id": 987654321,
+        "name": "John Doe"
+      },
+      "action": {
+        "type": "navigate",
+        "screen": "MessageScreen",
+        "params": {
+          "messageId": 789012345
+        }
+      }
     },
     {
-      "date": "2024-01-20",
-      "previewText": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "id": 123456789,
+      "title": "New Message",
+      "body": "You have received a new message from a friend.",
+      "timestamp": "2024-02-23T12:30:45Z",
+      "sender": {
+        "id": 987654321,
+        "name": "John Doe"
+      },
+      "action": {
+        "type": "navigate",
+        "screen": "MessageScreen",
+        "params": {
+          "messageId": 789012345
+        }
+      }
     },
     {
-      "date": "2023-12-05",
-      "previewText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "id": 123456789,
+      "title": "New Message",
+      "body": "You have received a new message from a friend.",
+      "timestamp": "2024-02-23T12:30:45Z",
+      "sender": {
+        "id": 987654321,
+        "name": "John Doe"
+      },
+      "action": {
+        "type": "navigate",
+        "screen": "MessageScreen",
+        "params": {
+          "messageId": 789012345
+        }
+      }
     },
     {
-      "date": "2023-12-10",
-      "previewText": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "id": 123456789,
+      "title": "New Message",
+      "body": "You have received a new message from a friend.",
+      "timestamp": "2024-02-23T12:30:45Z",
+      "sender": {
+        "id": 987654321,
+        "name": "John Doe"
+      },
+      "action": {
+        "type": "navigate",
+        "screen": "MessageScreen",
+        "params": {
+          "messageId": 789012345
+        }
+      }
     },
     {
-      "date": "2023-12-20",
-      "previewText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "id": 123456789,
+      "title": "New Message",
+      "body": "You have received a new message from a friend.",
+      "timestamp": "2024-02-23T12:30:45Z",
+      "sender": {
+        "id": 987654321,
+        "name": "John Doe"
+      },
+      "action": {
+        "type": "navigate",
+        "screen": "MessageScreen",
+        "params": {
+          "messageId": 789012345
+        }
+      }
     },
     {
-      "date": "2023-12-25",
-      "previewText": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    },
-    {
-      "date": "2023-11-05",
-      "previewText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-    },
-    {
-      "date": "2023-12-15",
-      "previewText": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      "date": "2023-12-30",
-      "previewText": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "id": 123456789,
+      "title": "New Message",
+      "body": "You have received a new message from a friend.",
+      "timestamp": "2024-02-23T12:30:45Z",
+      "sender": {
+        "id": 987654321,
+        "name": "John Doe"
+      },
+      "action": {
+        "type": "navigate",
+        "screen": "MessageScreen",
+        "params": {
+          "messageId": 789012345
+        }
+      }
     }
   ];
 
-  // Group notifications by month
-  const notificationsByMonth = notifications.reduce((acc, notification) => {
-    const month = notification.date.substring(0, 7); // Extract YYYY-MM
-    if (!acc[month]) {
-      acc[month] = [];
-    }
-    acc[month].push(notification);
-    return acc;
-  }, {});
-
   return (
     <View style={styles.container}>
-      {Object.keys(notificationsByMonth).map((month, index) => (
-        <NotificationBox key={index} month={month} index={index} />
-      ))}
+      <FlatList
+        data={notifications}
+        keyExtractor={(item, index) => {
+          return index.toString();
+        }}
+        renderItem={({ item }) => {
+          return (
+            <View style={styles.notificationBox}>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.body}>{item.body}</Text>
+              <Text style={styles.timestamp}>{item.timestamp}</Text>
+              <Text style={styles.sender}>From: {item.sender.name}</Text>
+              {/* Additional content or actions can be added here */}
+            </View>
+          );
+        }}
+      ></FlatList>
     </View>
   );
-}
-
-const formatMonth = (month) => {
-  const [year, monthNumber] = month.split('-');
-  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  return `${monthNames[parseInt(monthNumber) - 1]} ${year}`;
 }
 
 const styles = StyleSheet.create({
@@ -78,5 +154,32 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#fff',
     padding: 10,
+  },
+
+  notificationBox: {
+    backgroundColor: '#ffffff',
+    padding: 16,
+    marginBottom: 16,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#dddddd',
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+  body: {
+    fontSize: 16,
+    marginBottom: 8,
+  },
+  timestamp: {
+    fontSize: 14,
+    color: 'gray',
+    marginBottom: 8,
+  },
+  sender: {
+    fontSize: 14,
+    color: 'blue',
   },
 });

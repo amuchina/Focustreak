@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { HeaderTitle } from './HeaderTitle';
 import { DropdownMenu } from './DropdownMenu';
 
@@ -10,23 +10,26 @@ export const Header = (props) => {
       text = "Welcome, Giovi";
       break;
     case 'notifications':
-      text = "Notifications center";
+      text = "Notifications";
       break;
     default:
-      text = "Nothing to show";
+      text = "Nothing";
   }
   return (
     <View style={styles.container}>
       <DropdownMenu></DropdownMenu>
       <HeaderTitle text={text}></HeaderTitle>
-    </View>  
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flex: 1,
+    flexDirection: "row",
     gap: 20,
-    marginTop: -380,
+
+    marginTop: 20,      // fix this thing
+    marginBottom: -650, // fix this thing
   },
 });
